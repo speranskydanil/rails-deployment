@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Rails Deployment : Simple scripts you can use for working with rails." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rails Deployment</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/speranskydanil/rails-deployment">View on GitHub</a>
+
+          <h1 id="project_title">Rails Deployment</h1>
+          <h2 id="project_tagline">Simple scripts you can use for working with rails.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/speranskydanil/rails-deployment/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/speranskydanil/rails-deployment/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Simple scripts you can use for working with rails.</p>
+
+<h3>
+<a name="rebuilding" class="anchor" href="#rebuilding"><span class="octicon octicon-link"></span></a>Rebuilding</h3>
+
+<pre><code>bin/rebuild -h
+
+Usage: bin/rebuild [options]
+
+-f, --flags F        Flags for the rebuild script (by default all of them)
+                     l - bundle exec rake log:clear
+                     a - bundle exec rake assets:clean
+                     i - [ -e public/system ] &amp;&amp; rm -R public/system/*
+                     d - bundle exec rake db:drop
+                     c - bundle exec rake db:create
+                     m - bundle exec rake db:migrate
+                     s - bundle exec rake db:seed
+                     p - RAILS_ENV=production bundle exec rake assets:precompile
+                     j - [ -e bin/delayed_job ] &amp;&amp; bin/delayed_job restart
+                     Example: dcms
+
+-e, --except E       Except flags for the rebuild script
+                     See documentation for --flags
+</code></pre>
+
+<h3>
+<a name="updating" class="anchor" href="#updating"><span class="octicon octicon-link"></span></a>Updating</h3>
+
+<pre><code>bin/update -h
+
+Usage: bin/update [options]
+
+-f, --flags F        Flags for the update script (by default all of them)
+                     l - bundle exec rake log:clear
+                     a - bundle exec rake assets:clean
+                     g - git pull
+                     b - bundle install
+                     m - bundle exec rake db:migrate
+                     p - RAILS_ENV=production bundle exec rake assets:precompile
+                     j - [ -e bin/delayed_job ] &amp;&amp; bin/delayed_job restart
+                     Example: gm
+
+-e, --except E       Except flags for the update script
+                     See documentation for --flags
+</code></pre>
+
+<p><strong>Author (Speransky Danil):</strong>
+<a href="http://dsperansky.info">Personal Page</a> |
+<a href="http://ru.linkedin.com/in/speranskydanil/en">LinkedIn</a> |
+<a href="https://github.com/speranskydanil?tab=repositories">GitHub</a> |
+<a href="http://stackoverflow.com/users/1550807/speransky-danil">StackOverflow</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rails Deployment maintained by <a href="https://github.com/speranskydanil">speranskydanil</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
