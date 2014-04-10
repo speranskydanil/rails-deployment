@@ -12,7 +12,7 @@ Simple scripts you can use for working with rails.
                          i - [ -e public/system ] && rm -R public/system/*
                          d - bundle exec rake db:drop
                          c - bundle exec rake db:create
-                         m - bundle exec rake db:migrate
+                         m - bundle exec rake db:schema:load
                          s - bundle exec rake db:seed
                          p - RAILS_ENV=production bundle exec rake assets:precompile
                          j - [ -e bin/delayed_job ] && bin/delayed_job restart
