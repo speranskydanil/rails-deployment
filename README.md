@@ -15,7 +15,7 @@ Simple scripts you can use for working with rails.
                          m - bundle exec rake db:schema:load
                          s - bundle exec rake db:seed
                          p - RAILS_ENV=production bundle exec rake assets:precompile
-                         j - [ -e bin/delayed_job ] && bin/delayed_job restart
+                         j - [ -e bin/delayed_job ] && RAILS_ENV=production bin/delayed_job restart
                          Example: dcms
 
     -e, --except E       Except flags for the rebuild script
@@ -34,7 +34,7 @@ Simple scripts you can use for working with rails.
                          b - bundle install
                          m - bundle exec rake db:migrate
                          p - RAILS_ENV=production bundle exec rake assets:precompile
-                         j - [ -e bin/delayed_job ] && bin/delayed_job restart
+                         j - [ -e bin/delayed_job ] && RAILS_ENV=production bin/delayed_job restart
                          Example: gm
 
     -e, --except E       Except flags for the update script
